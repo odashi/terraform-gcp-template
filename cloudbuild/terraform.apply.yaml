@@ -1,0 +1,10 @@
+steps:
+- id: terraform init
+  name: hashicorp/terraform:latest
+  args: ['init', '-no-color']
+- id: terraform apply
+  name: hashicorp/terraform:latest
+  args: ['apply', '-auto-approve', '-no-color']
+
+options:
+  logging: CLOUD_LOGGING_ONLY

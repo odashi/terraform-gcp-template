@@ -1,0 +1,13 @@
+steps:
+- id: terraform init
+  name: hashicorp/terraform:latest
+  args: ['init', '-no-color']
+- id: terraform validate
+  name: hashicorp/terraform:latest
+  args: ['validate', '-no-color']
+- id: terraform plan
+  name: hashicorp/terraform:latest
+  args: ['plan', '-no-color']
+
+options:
+  logging: CLOUD_LOGGING_ONLY
